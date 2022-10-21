@@ -1,8 +1,12 @@
 <div class="row border-top py-3 px-3">
   <div class="col-sm-2 gx-0 text-end">
+  <% if tweet.monster.image.attached? %>
+  <%= image_tag tweet.monster.image, class: "img-thumbnail rounded-circle", style: "max-width: 48px"  %>
+  <% else %>
     <%# https://xsgames.co/randomusers/ %>
     <%= image_tag "https://xsgames.co/randomusers/avatar.php?g=pixel&id=#{SecureRandom.uuid}", class: "img-thumbnail rounded-circle", style: "max-width: 48px" %>
-  </div>
+  <% end %>
+    </div>
 
   <div class="col-sm-10">
     <p class="mb-0">
