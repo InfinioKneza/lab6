@@ -1,1 +1,10 @@
-<%# Update me %><%= @monsters.inspect %>
+<%= link_to 'Añadir Monstruo', new_monster_path, class: "btn btn-light rounded-pill mb-2 text-start ps-4" %>
+
+<% @monsters.each do |monster| %>
+    <p>
+        <%= link_to monster.name, monster %>
+        <%= link_to 'Editar Monstruo', edit_monster_path(monster) %>
+    </p>
+<% end %>
+
+
