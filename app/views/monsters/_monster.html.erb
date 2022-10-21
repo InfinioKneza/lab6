@@ -1,1 +1,3 @@
-    <%= image_tag monster.image %>
+<% if monster.image.attached? %>
+   <%= image_tag monster.image %>
+<% end %>
