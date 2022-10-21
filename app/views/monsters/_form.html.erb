@@ -1,0 +1,12 @@
+<%= form_with model: monster do |f| %>
+
+
+   <%= f.label :'nombre:' %> <%= f.text_field :name, placeholder: "Oni", class: "form-control mb-2" %>
+   <%= f.label :'descripcion:' %> <%= f.text_area :description, placeholder: "Acecha a sus victimas con facilidad.", class: "form-control mb-2" %>
+   <%= f.label :'numero de teléfono:' %> <%= f.text_field :phone, placeholder: "0111523881273", class: "form-control mb-2" %>
+   <%= f.label :'fecha de nacimiento:' %> <%= f.date_field :birthdate %>
+   <%= f.file_field :image, multiple: false %>
+ 
+   <%= f.submit "Añadir", class: "btn btn-primary mb-2" %>
+<% end %>
+   
